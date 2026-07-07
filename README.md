@@ -6,6 +6,8 @@ Livrée en **un seul fichier**, sans dépendance, avec un **éditeur graphique**
 
 ![version](https://img.shields.io/badge/version-1.7.1-blue)
 
+![Aperçu de la Custom Dropdown Card](demo.gif)
+
 ---
 
 ## Fonctionnalités
