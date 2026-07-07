@@ -143,7 +143,29 @@ ne sert plus qu'à laisser passer les clés non listées (`value_template`, `typ
   - la console affiche la bonne version au chargement.
 - Bumper `VERSION` (constante en haut) **et** rappeler d'incrémenter `?v=N` sur la ressource HA.
 
-## 7. Historique des versions
+## 7. HACS — publication et releases
+
+Le dépôt est configuré comme **plugin Lovelace** HACS :
+- `hacs.json` : `filename` pointe sur `custom-dropdown-card.js` (à la racine, donc trouvé
+  sans dossier `dist/`). `render_readme: true` → le README sert de fiche HACS.
+- `.github/workflows/validate.yml` : lance `hacs/action@main` (category `plugin`) pour
+  valider la structure à chaque push/PR.
+
+Pré-requis GitHub côté dépôt (à faire une fois) : renseigner une **description** et des
+**topics** (`home-assistant`, `lovelace`, `hacs`, `custom-card`) — HACS les exige.
+
+Processus de release (versionner) :
+1. Bumper la constante `VERSION` dans `custom-dropdown-card.js`.
+2. Mettre à jour le numéro affiché dans le README et l'historique ci-dessous.
+3. Commit, puis créer un **tag Git** = version (ex. `v1.7.1`) et une **release GitHub**.
+   HACS s'appuie sur les tags/releases pour proposer les mises à jour.
+   > Cohérence conseillée : garder le tag aligné sur la constante `VERSION` (au `v` près).
+
+Installation en dépôt personnalisé tant que non listé par défaut :
+HACS → dépôts personnalisés → `pbn42/ha-custom-dropdown-card`, catégorie `Lovelace`.
+La ressource ajoutée par HACS est `/hacsfiles/ha-custom-dropdown-card/custom-dropdown-card.js`.
+
+## 8. Historique des versions
 
 - **1.0.0** : carte de base + gestion des actions HA.
 - **1.1.0** : éditeur graphique (`ha-form`, panneaux d'options, éditeur d'action natif).

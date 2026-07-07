@@ -21,6 +21,22 @@ Livrée en **un seul fichier**, sans dépendance, avec un **éditeur graphique**
 
 ## Installation
 
+### Via HACS (recommandé)
+
+Tant que le dépôt n'est pas dans le catalogue par défaut de HACS, ajoute-le en **dépôt personnalisé** :
+
+1. HACS → menu ⋮ → **Dépôts personnalisés**.
+2. **Dépôt** : `pbn42/ha-custom-dropdown-card` — **Catégorie** : `Lovelace` (plugin).
+3. Ouvre l'entrée « Custom Dropdown Card » → **Télécharger**.
+4. HACS ajoute automatiquement la ressource
+   `/hacsfiles/ha-custom-dropdown-card/custom-dropdown-card.js` (type *Module JavaScript*).
+   Si ce n'est pas le cas, ajoute-la manuellement (voir ci-dessous).
+5. Recharge la page ; la console (F12) doit afficher `CUSTOM-DROPDOWN-CARD v1.7.1`.
+
+Les mises à jour se font ensuite en un clic depuis HACS.
+
+### Installation manuelle
+
 1. Copier `custom-dropdown-card.js` dans le dossier `/config/www/` de Home Assistant
    (chemin final : `/config/www/custom-dropdown-card.js`).
 2. **Paramètres → Tableaux de bord → menu ⋮ → Ressources → Ajouter une ressource**
